@@ -24,27 +24,12 @@ export default function App() {
 
   async function handleLikeRepository(id) {
     
-    const response = await api.post(`/repositories/${id}/like`);
-    // const responseData = response.data;
-    const currentRepositories = [...repositories];
-    const repositoryIndex = repositories.findIndex(repository => repository.id === id); 
+    const response = await api.post(`/repositories/${id}/like`)
+    const repositoryIndex = repositories.findIndex(repository => repository.id === id);
+    repositories[repositoryIndex].likes++;
 
-    currentRepositories[repositoryIndex].likes++;
-
-    setRepositories(currentRepositories);
-  }
-
-  /*
-  async function handleLikeRepository(id) {
-    const response = await api.post(`/repositories/${id}/like`);
-    const resData = response.data;
-
-    const repositoryIndex = repositories.findIndex(repository => repository.id === id);    
-    
-    setRepositories([repositories[repositoryIndex].likes = resData.likes]);
-    
-  }
-  */
+    setRepositories([...repositories]);
+  }  
 
   return (
     <>
@@ -72,7 +57,7 @@ export default function App() {
                 style={styles.likeText}
                 testID={`repository-likes-${repository.id}`}
               >
-                {repository.likes}
+                {repository.likes} curtidas
               </Text>
             </View>
 
