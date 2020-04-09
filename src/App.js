@@ -39,6 +39,8 @@ export default function App() {
 
 */
 
+
+
   async function handleLikeRepository(id) {
     // Implement "Like Repository" functionality
   }
@@ -58,13 +60,20 @@ export default function App() {
               <Text style={styles.repository}>{repository.title}</Text>
 
               <View style={styles.techsContainer}>
+                {repository.techs.map(tech => (
+                  <Text style={styles.tech} key={repository.techs}>
+                  {repository.techs}
+                  </Text>
+                ))}
+              </View>
+              {/* <View style={styles.techsContainer}>
                 <Text style={styles.tech}>
                   {repository.techs[0]}
                 </Text>
                 <Text style={styles.tech}>
                   {repository.techs[1]}
                 </Text>
-              </View>
+              </View> */}
 
               <View style={styles.likesContainer}>
                 <Text
