@@ -33,7 +33,7 @@ export default function App() {
 
   return (
     <>
-      <StatusBar barStyle="light-content" backgroundColor="#7159c1" />
+      <StatusBar barStyle="dark-content" backgroundColor="#FCD0BA" />
       <SafeAreaView style={styles.container}>
 
         <FlatList            
@@ -81,10 +81,11 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#7159c1",
+    backgroundColor: "#FCD0BA",  
   },
-  repositoryContainer: {
-    marginBottom: 15,
+  repositoryContainer: {  
+    backgroundColor: '#FDFBD4',
+    marginTop: 15,
     marginHorizontal: 15,
     backgroundColor: "#fff",
     padding: 20,
@@ -101,7 +102,7 @@ const styles = StyleSheet.create({
     fontSize: 12,
     fontWeight: "bold",
     marginRight: 10,
-    backgroundColor: "#04d361",
+    backgroundColor: "#8FB9A8",
     paddingHorizontal: 10,
     paddingVertical: 5,
     color: "#fff",
@@ -124,7 +125,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     marginRight: 10,
     color: "#fff",
-    backgroundColor: "#7159c1",
+    backgroundColor: "#F2828D",
     padding: 15,
   },
 });
